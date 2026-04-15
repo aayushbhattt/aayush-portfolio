@@ -1,8 +1,8 @@
 # STATE.md — Project Memory
 
 > **Last Updated**: 2026-04-15
-> **Current Phase**: Phase 1 — Planning Complete ✅
-> **Overall Status**: 🟢 Ready to execute Phase 1
+> **Current Phase**: Phase 2 — Planning Complete ✅
+> **Overall Status**: 🟢 Ready to execute Phase 2
 
 ---
 
@@ -10,13 +10,13 @@
 
 - SPEC.md finalized ✅
 - ROADMAP.md created with 5 phases ✅
-- Phase 1 plans created: 2 plans, 2 waves ✅
-- Profile photo: needs to be saved as `assets/images/profile.jpg`
-- No code written yet
+- Phase 1 complete (Foundation, Navbar, Hero) ✅
+- Phase 2 plans created: 2 plans, 2 waves ✅
+- Profile photo: `assets/images/profile.jpg` in place ✅
 
-## Phase 1 Plans
-- `.gsd/phases/1/1-PLAN.md` — Project Structure + Design System (Wave 1)
-- `.gsd/phases/1/2-PLAN.md` — Navbar + Hero Section (Wave 2)
+## Phase 2 Plans
+- `.gsd/phases/2/1-PLAN.md` — About & Skills Sections (Wave 1)
+- `.gsd/phases/2/2-PLAN.md` — Featured Projects Section (Wave 2)
 
 ## Decisions Made
 
