@@ -76,24 +76,177 @@
     </div>
   </section>
 
-  <!-- ─── About ─── (Phase 2) -->
+  <!-- ─── About ─── -->
   <section class="about section" id="about">
     <div class="container">
-      <!-- Filled in Phase 2 -->
+      <div class="about__inner">
+        <div class="about__image">
+          <div class="about__image-wrapper">
+            <img src="assets/images/profile.jpg" alt="Aayush Bhatt" />
+            <div class="about__image-accent"></div>
+          </div>
+        </div>
+        <div class="about__content">
+          <h2 class="section-title">About <span>Me</span></h2>
+          <div class="divider"></div>
+          <p class="about__text">
+            I am Aayush Bhatt, a Full Stack Developer and a B.Tech CSE student specializing in AI/ML at Vedam School of Technology, Pune. I am passionate about building scalable web applications and solving complex problems through code.
+          </p>
+          <p class="about__text">
+            With a solid foundation in Data Structures and Algorithms, I enjoy crafting seamless user experiences and robust backend systems. I am currently expanding my expertise in Next.js and Django.
+          </p>
+          <div class="about__highlight">
+            <div class="about__highlight-icon">🥋</div>
+            <p>
+              When I'm not coding, I'm breaking boards — I hold a <strong>Black Belt in Taekwondo</strong> and have competed from district to state levels.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ─── Skills ─── (Phase 2) -->
+  <!-- ─── Skills ─── -->
   <section class="skills section" id="skills">
     <div class="container">
-      <!-- Filled in Phase 2 -->
+      <h2 class="section-title">Technical <span>Skills</span></h2>
+      <div class="divider"></div>
+      <div class="skills__grid">
+        <div class="skills__category card">
+          <h4>Languages</h4>
+          <div class="skills__list">
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+        <div class="skills__category card">
+          <h4>Frameworks</h4>
+          <div class="skills__list">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Django</span>
+          </div>
+        </div>
+        <div class="skills__category card">
+          <h4>Databases</h4>
+          <div class="skills__list">
+            <span class="tag">MySQL</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Supabase</span>
+          </div>
+        </div>
+        <div class="skills__category card">
+          <h4>Tools & Platforms</h4>
+          <div class="skills__list">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Netlify</span>
+            <span class="tag">REST APIs</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ─── Projects ─── (Phase 2) -->
+  <!-- ─── Projects ─── -->
   <section class="projects section" id="projects">
     <div class="container">
-      <!-- Filled in Phase 2 -->
+      <div class="section-header">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">
+          A selection of my best work, ranging from AI applications to administrative platforms.
+        </p>
+      </div>
+
+      <div class="projects__grid">
+        <!-- Project 1: VST Admin -->
+        <article class="project-card card">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span>Admin Dash</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <header class="project-card__header">
+              <span class="tag">Featured</span>
+              <h3 class="project-card__title">VST OpenSource Admin</h3>
+            </header>
+            <p class="project-card__desc">
+              Comprehensive admin dashboard with 200 daily active users, featuring virtual scrolling, CI/CD, and real-time analytics.
+            </p>
+            <div class="project-card__tech">
+              <span class="tag">React</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">GitHub API</span>
+            </div>
+            <footer class="project-card__links">
+              <a href="https://github.com/vstopensource-gif/Vedam-OpenSource-Admin" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub ↗</a>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Project 2: Study Buddy -->
+        <article class="project-card card">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span>Study Buddy</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <header class="project-card__header">
+              <span class="tag">🏆 Hackathon</span>
+              <h3 class="project-card__title">Study Buddy</h3>
+            </header>
+            <p class="project-card__desc">
+              AI-powered Java practice platform with real-time execution and Gemini AI code review. 2nd place at InnoveDAM.
+            </p>
+            <div class="project-card__tech">
+              <span class="tag">React</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Gemini AI</span>
+            </div>
+            <footer class="project-card__links">
+              <a href="https://github.com/aayushbhattt/Study_Buddy" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub ↗</a>
+              <a href="https://studybuddytest12.netlify.app/" target="_blank" rel="noopener noreferrer" class="nav-link">Live Demo ↗</a>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Project 3: Money Manage -->
+        <article class="project-card card">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span>Money Manage</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <header class="project-card__header">
+              <span class="tag">Personal</span>
+              <h3 class="project-card__title">Money Manage</h3>
+            </header>
+            <p class="project-card__desc">
+              Expense tracker with real-time sync across devices and analytics dashboards handling 50+ transactions.
+            </p>
+            <div class="project-card__tech">
+              <span class="tag">HTML/JS</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Chart.js</span>
+            </div>
+            <footer class="project-card__links">
+              <a href="https://github.com/aayushbhattt/Money-Tracker" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub ↗</a>
+              <a href="https://moneytracker207.netlify.app/" target="_blank" rel="noopener noreferrer" class="nav-link">Live Demo ↗</a>
+            </footer>
+          </div>
+        </article>
+      </div>
+
+      <div class="projects__cta">
+        <a href="projects.html" class="btn-outline">View All Projects <span>→</span></a>
+      </div>
     </div>
   </section>
 

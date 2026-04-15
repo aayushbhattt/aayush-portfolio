@@ -1,0 +1,63 @@
+/* ============================================================
+   skills.css — Technical Skills Section
+   ============================================================ */
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.skills__category {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+}
+
+/* Category Heading (e.g., Languages, Frameworks) */
+.skills__category h4 {
+  font-family: var(--font-code);
+  font-size: var(--fs-lg);
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Simple red dot before h4 */
+.skills__category h4::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* Hover lift on categories */
+.skills__category.card:hover {
+  border-color: rgba(215, 35, 35, 0.4);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills__category {
+    padding: var(--space-lg);
+  }
+}

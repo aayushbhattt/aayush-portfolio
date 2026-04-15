@@ -83,7 +83,6 @@ if (typeEl) {
     'Full Stack Developer',
     'AI Enthusiast',
     'Problem Solver',
-    'Open Source Contributor',
   ];
 
   let phraseIndex = 0;
