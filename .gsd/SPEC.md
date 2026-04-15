@@ -101,14 +101,14 @@ A clean, dark, tech-aesthetic personal portfolio for Aayush Bhatt — a full-sta
 **Leadership:**
 - 🏅 President — Competitive Code Club, Vedam School of Technology
 - 🎪 Core Committee / Events Head — Noesis Tech Fest
-- 🥈 2nd Place — InnoveDAM 24-Hour Hackathon (24 teams)
+- 🥈 2nd Place — InnoVEDAM 24-Hour Hackathon (24 teams)
 
 **Technical:**
 - 💻 67+ problems solved on LeetCode
 
 **Beyond Tech:**
 - 🥋 Black Belt in Taekwondo
-- 🏟️ Competed District → State level
+- 🏟️ Competed District level
 
 ---
 

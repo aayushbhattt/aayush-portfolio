@@ -1,0 +1,215 @@
+/* ============================================================
+   hero.css — Hero Section
+   ============================================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--navbar-height);
+}
+
+/* ─── Background Grid ─── */
+.hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      rgba(245, 237, 237, 0.025) 50px,
+      rgba(245, 237, 237, 0.025) 51px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50px,
+      rgba(245, 237, 237, 0.025) 50px,
+      rgba(245, 237, 237, 0.025) 51px
+    );
+  pointer-events: none;
+}
+
+/* ─── Red glow top-left ─── */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle at center,
+    rgba(215, 35, 35, 0.14) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Red glow bottom-right ─── */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle at center,
+    rgba(215, 35, 35, 0.07) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Content ─── */
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+/* Greeting */
+.hero__greeting {
+  font-family: var(--font-code);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  color: var(--color-accent);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-xs);
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.1s forwards;
+}
+
+/* Name */
+.hero__name {
+  font-size: var(--fs-5xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-sm);
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.25s forwards;
+}
+
+/* Typewriter row */
+.hero__typewriter {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  min-height: 2.2rem;
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.4s forwards;
+}
+
+.hero__typewriter-text {
+  color: var(--color-text-primary);
+}
+
+.hero__cursor {
+  color: var(--color-accent);
+  font-weight: var(--fw-bold);
+  font-size: 1.2em;
+  line-height: 1;
+  animation: blink 0.85s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Bio */
+.hero__bio {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  max-width: 540px;
+  line-height: 1.75;
+  margin-bottom: var(--space-xl);
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.55s forwards;
+}
+
+/* CTA Buttons */
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2xl);
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.7s forwards;
+}
+
+/* Scroll hint */
+.hero__scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text-secondary);
+  font-family: var(--font-code);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.9s forwards;
+}
+
+.hero__scroll-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-accent), transparent);
+}
+
+/* ─── Entrance Animation ─── */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .hero__name {
+    font-size: var(--fs-4xl);
+  }
+
+  .hero__typewriter {
+    font-size: var(--fs-xl);
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__name {
+    font-size: var(--fs-3xl);
+  }
+}
