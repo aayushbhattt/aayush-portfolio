@@ -31,13 +31,118 @@
     </nav>
   </header>
 
-  <!-- ─── Projects Page ─── (Phase 4) -->
+  <!-- ─── Projects Page ─── -->
   <main class="projects-page section" id="projects-page" style="padding-top: calc(var(--navbar-height) + var(--space-2xl));">
     <div class="container">
-      <!-- Filled in Phase 4 -->
-      <h1 class="section-title">All <span>Projects</span></h1>
+      <div class="section-header">
+        <h1 class="section-title">All <span>Projects</span></h1>
+        <div class="divider"></div>
+        <p class="section-subtitle">
+          A complete showcase of my technical work. Filter by technology to explore specific case studies.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="react">React</button>
+        <button class="filter-btn" data-filter="vanilla">Vanilla JS</button>
+        <button class="filter-btn" data-filter="firebase">Firebase</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects__grid" id="allProjectsGrid">
+        
+        <!-- Project 1: Study Buddy -->
+        <article class="project-card card" data-category="react ai firebase" tabindex="0" role="button">
+          <div class="project-card__content">
+            <header class="project-card__header">
+              <span class="tag">🏆 Hackathon Winning Project</span>
+              <h3 class="project-card__title">Study Buddy</h3>
+            </header>
+            <p class="project-card__desc">
+              AI Code Review &amp; Practice Platform with browser-based execution, automated feedback via Gemini AI, and real-time multiplayer progress tracking.
+            </p>
+            <div class="project-card__tech">
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Gemini AI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Money Manage -->
+        <article class="project-card card" data-category="vanilla firebase" tabindex="0" role="button">
+          <div class="project-card__content">
+            <header class="project-card__header">
+              <span class="tag">Personal</span>
+              <h3 class="project-card__title">Money Manage</h3>
+            </header>
+            <p class="project-card__desc">
+              Personal expense tracking web application with full CRUD operations, multi-device sync, and rich analytics dashboards.
+            </p>
+            <div class="project-card__tech">
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Chart.js</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Image Quiz -->
+        <article class="project-card card" data-category="vanilla firebase" tabindex="0" role="button">
+          <div class="project-card__content">
+            <header class="project-card__header">
+              <span class="tag">Event Ready</span>
+              <h3 class="project-card__title">Image Quiz Application</h3>
+            </header>
+            <p class="project-card__desc">
+              Real-time image-based quiz platform featuring a live leaderboard, scoring engine, and admin control dashboard.
+            </p>
+            <div class="project-card__tech">
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Firebase</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: VST Admin -->
+        <article class="project-card card" data-category="react firebase" tabindex="0" role="button">
+          <div class="project-card__content">
+            <header class="project-card__header">
+              <span class="tag">Open Source</span>
+              <h3 class="project-card__title">VST OpenSource Admin</h3>
+            </header>
+            <p class="project-card__desc">
+              Admin dashboard managing open-source contributions. Features GitHub API integration and CI/CD pipelines.
+            </p>
+            <div class="project-card__tech">
+              <span class="tag">React</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">GitHub API</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
     </div>
   </main>
+
+  <!-- Modal Template -->
+  <div class="modal hidden" id="projectModal">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose">&times;</button>
+      <div class="modal__body">
+        <h2 id="modalTitle">Project Title</h2>
+        <div class="modal__tech" id="modalTech"></div>
+        <p id="modalDesc">Full detailed description of the project goes here. It provides a deep dive into the architecture and challenges.</p>
+        <div class="modal__links" id="modalLinks"></div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
   <script src="js/projects-filter.js"></script>
