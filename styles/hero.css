@@ -142,6 +142,7 @@
   animation: heroFadeUp 0.6s ease 0.55s forwards;
 }
 
+
 /* CTA Buttons */
 .hero__cta {
   display: flex;
@@ -164,13 +165,19 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   opacity: 0;
-  animation: heroFadeUp 0.6s ease 0.9s forwards;
+  animation: heroFadeUp 0.6s ease 0.9s forwards, scrollPulse 2s ease-in-out infinite 1.5s;
 }
 
 .hero__scroll-line {
   width: 60px;
   height: 1px;
-  background: linear-gradient(to right, var(--color-accent), transparent);
+  background: linear-gradient(to right, #ff3b3b, transparent);
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.4);
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: translateX(0); }
+  50% { opacity: 0.6; transform: translateX(5px); }
 }
 
 /* ─── Entrance Animation ─── */

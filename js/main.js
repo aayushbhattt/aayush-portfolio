@@ -52,28 +52,66 @@ if (hamburger && navLinks) {
   });
 }
 
-/* ─── 3. Active Nav Link on Scroll ─── */
+/* ─── 3. Active Nav Link (Scroll & Path) ─── */
 const sections = document.querySelectorAll('section[id]');
-const navItems  = document.querySelectorAll('.nav-link');
+const navItems  = document.querySelectorAll('.navbar__links .nav-link');
 
-if (sections.length && navItems.length) {
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navItems.forEach(link => link.classList.remove('active'));
-          const activeLink = document.querySelector(
-            `.nav-link[href="#${entry.target.id}"]`
-          );
-          if (activeLink) activeLink.classList.add('active');
-        }
-      });
-    },
-    { threshold: 0.45 }
-  );
+function updateActiveNavItem() {
+  const currentPath = window.location.pathname;
+  const isProjectsPage = currentPath.includes('projects.html');
+  
+  // 1. Handle Standalone Pages (Projects)
+  if (isProjectsPage) {
+    navItems.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === 'projects.html') {
+        link.classList.add('active');
+      }
+    });
+    return;
+  }
 
-  sections.forEach(section => sectionObserver.observe(section));
+  // 2. Handle Homepage Scroll Detection
+  if (sections.length && navItems.length) {
+    let currentSectionId = '';
+    const scrollPos = window.scrollY + 100;
+
+    sections.forEach(section => {
+      if (scrollPos >= section.offsetTop) {
+        currentSectionId = section.getAttribute('id');
+      }
+    });
+
+    navItems.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentSectionId}`) {
+        link.classList.add('active');
+      }
+    });
+  }
 }
+
+window.addEventListener('scroll', updateActiveNavItem, { passive: true });
+updateActiveNavItem();
+
+/* ─── 3.5. Scroll Reveal Observer ─── */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('reveal-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.reveal-hidden').forEach(el => {
+    revealObserver.observe(el);
+  });
+});
 
 /* ─── 4. Typewriter Effect ─── */
 const typeEl = document.getElementById('typewriterText');

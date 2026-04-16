@@ -253,3 +253,27 @@
 .hidden-card {
   display: none !important;
 }
+
+/* Modal High-Contrast Polish */
+.modal__tech .tag {
+  background: rgba(255, 59, 59, 0.15);
+  color: #ff5f5f;
+  border: 1px solid rgba(255, 59, 59, 0.3);
+  font-weight: var(--fw-bold);
+}
+
+.modal .btn-primary {
+  background: #ff3b3b;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.4);
+}
+
+.modal .btn-outline {
+  border-color: #ff3b3b;
+  color: #ff5f5f;
+  background: transparent;
+}
+
+.modal .btn-outline:hover {
+  background: rgba(255, 59, 59, 0.1);
+}
