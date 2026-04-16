@@ -44,3 +44,18 @@
 ### Contact Section
 - **Decision**: Option A (Minimal Icons).
 - **Addition**: Added LeetCode link (https://leetcode.com/u/aayushbhattt/) and confirmed email (aayushbhatt0210@gmail.com).
+
+---
+
+## Phase 5 Decisions
+
+**Date:** 2026-04-16
+
+### Scope & Structure
+- **Projects Layout**: Increased card sizes for `projects.html`.
+- **Project Detail View**: Implementing a popup/modal to show rich details when a card is clicked.
+- **Bug Fixes**: Will resolve Wave 1 bugs (About image z-index, Certificates gallery formatting, WebP contact icons, Navbar anchor links).
+
+### Approach
+- **Filter Style**: Option A (Minimal pill-shaped buttons at the top of the gallery). Default state is "All".
+- **Modal Stack**: Pure Vanilla JS modal logic. Ensures 0 external dependencies.
