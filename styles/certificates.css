@@ -3,14 +3,16 @@
    ============================================================ */
 
 .certificates__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-lg);
   margin-top: var(--space-xl);
 }
 
 .certificate-card {
   position: relative;
+  width: 150px; /* Small thumbnails for gallery feel */
   z-index: 1;
 }
 
@@ -38,28 +40,22 @@
 }
 
 .certificate-card:hover .certificate-card__image {
-  transform: scale(2);
+  transform: scale(2.5); /* Strong magnification as requested */
   border-color: var(--color-accent);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(215, 35, 35, 0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(215, 35, 35, 0.5);
 }
 
 .certificate-card__info {
-  display: none; /* User requested no names, purely visual gallery */
+  display: none;
 }
 
 /* ─── Responsive ─── */
-@media (max-width: 992px) {
-  .certificates__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 600px) {
-  .certificates__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .certificate-card {
+    width: 120px;
   }
 
   .certificate-card:hover .certificate-card__image {
-     transform: scale(1.5); /* Less extreme on mobile */
+     transform: scale(1.8);
   }
 }

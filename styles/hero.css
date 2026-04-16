@@ -157,27 +157,47 @@
 /* Scroll hint */
 .hero__scroll-hint {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
   color: var(--color-text-secondary);
   font-family: var(--font-code);
   font-size: var(--fs-xs);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   opacity: 0;
-  animation: heroFadeUp 0.6s ease 0.9s forwards, scrollPulse 2s ease-in-out infinite 1.5s;
+  animation: heroFadeUp 0.6s ease 0.9s forwards;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero__scroll-line {
-  width: 60px;
-  height: 1px;
-  background: linear-gradient(to right, #ff3b3b, transparent);
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, #ff3b3b, transparent);
   box-shadow: 0 0 10px rgba(255, 59, 59, 0.4);
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes scrollPulse {
-  0%, 100% { opacity: 1; transform: translateX(0); }
-  50% { opacity: 0.6; transform: translateX(5px); }
+.hero__scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: scrollLineSlide 2s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+@keyframes scrollLineSlide {
+  0%   { top: -100%; opacity: 0; }
+  30%  { opacity: 1; }
+  60%  { top: 100%; opacity: 0; }
+  100% { top: 100%; opacity: 0; }
 }
 
 /* ─── Entrance Animation ─── */
