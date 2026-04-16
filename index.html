@@ -4,34 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary SEO -->
+    <!-- SEO Basics -->
     <title>Aayush Bhatt | Full Stack Developer</title>
-    <meta
-      name="description"
-      content="Portfolio of Aayush Bhatt — Full Stack Developer and B.Tech CSE (AI/ML) student at Vedam School of Technology, Pune. Building things for the web."
-    />
-    <meta
-      name="keywords"
-      content="Aayush Bhatt, Full Stack Developer, React, Firebase, Portfolio, Vedam, Pune"
-    />
-    <meta name="author" content="Aayush Bhatt" />
+    <meta name="description" content="Aayush Bhatt is a Full Stack Developer and AI/ML student skilled in React, Firebase, and scalable web applications. Explore projects, achievements, and contact details." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://aayushbhatt.com" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph (fix + add image) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Aayush Bhatt | Full Stack Developer" />
-    <meta
-      property="og:description"
-      content="Full Stack Developer & AI enthusiast. Building things for the web."
-    />
-    <meta property="og:url" content="https://aayushbhatt.dev" />
+    <meta property="og:description" content="Aayush Bhatt is a Full Stack Developer and AI/ML student skilled in React, Firebase, and scalable web applications." />
+    <meta property="og:url" content="https://aayushbhatt.com" />
+    <meta property="og:image" content="https://aayushbhatt.com/preview.png" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aayush Bhatt",
+      "url": "https://aayushbhatt.com",
+      "sameAs": [
+        "https://github.com/aayushbhattt",
+        "https://www.linkedin.com/in/aayushbhattt/"
+      ],
+      "jobTitle": "Full Stack Developer"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@200..700&family=Nunito:wght@200..1000&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Styles — order matters -->
     <link rel="stylesheet" href="styles/main.css" />
@@ -47,7 +52,7 @@
     <!-- ─── Navbar ─── -->
     <header class="navbar" id="navbar">
       <nav class="container navbar__inner">
-        <a href="#home" class="navbar__logo">Aayush<span>.</span></a>
+        <a href="#home" class="navbar__logo">Aayush Bhatt<span>.</span></a>
         <ul class="navbar__links" id="navLinks">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -98,7 +103,7 @@
         <div class="about__inner">
           <div class="about__image">
             <div class="about__image-wrapper">
-              <img src="./assets/images/profile.webp" alt="Aayush Bhatt" />
+              <img src="./assets/images/profile.webp" alt="Aayush Bhatt Full Stack Developer profile image" />
             </div>
             <div class="about__image-accent"></div>
           </div>
@@ -124,7 +129,10 @@
     <!-- ─── Skills ─── -->
     <section class="skills section reveal-hidden" id="skills">
       <div class="container">
-        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <h2 class="section-title">
+          Technical <span>Skills</span>
+          <span class="visually-hidden">Aayush Bhatt Full Stack Developer Skills</span>
+        </h2>
         <div class="divider"></div>
         <div class="skills__grid">
           <div class="skills__category card">
@@ -353,28 +361,28 @@
           <!-- Cert 1 -->
           <article class="certificate-card">
             <div class="certificate-card__image">
-              <img src="assets/certificates/AI-ML-certificate.webp" alt="AI/ML Certificate" loading="lazy" />
+              <img src="assets/certificates/AI-ML-certificate.webp" alt="Aayush Bhatt AI/ML Technical Certification" loading="lazy" />
             </div>
           </article>
 
           <!-- Cert 2 -->
           <article class="certificate-card">
             <div class="certificate-card__image">
-              <img src="assets/certificates/Quantum-Computing-certificate.webp" alt="Quantum Computing Certificate" loading="lazy" />
+              <img src="assets/certificates/Quantum-Computing-certificate.webp" alt="Aayush Bhatt Quantum Computing Technical Certification" loading="lazy" />
             </div>
           </article>
 
           <!-- Cert 3 -->
           <article class="certificate-card">
             <div class="certificate-card__image">
-              <img src="assets/certificates/InnoVedam-Certificate.webp" alt="InnoVedam Certificate" loading="lazy" />
+              <img src="assets/certificates/InnoVedam-Certificate.webp" alt="Aayush Bhatt InnoVedam Hackathon Winner Certificate" loading="lazy" />
             </div>
           </article>
 
           <!-- Cert 4 -->
           <article class="certificate-card">
             <div class="certificate-card__image">
-              <img src="assets/certificates/blackbelt-certificate.webp" alt="Black Belt Certificate" loading="lazy" />
+              <img src="assets/certificates/blackbelt-certificate.webp" alt="Aayush Bhatt Taekwondo Black Belt Certification" loading="lazy" />
             </div>
           </article>
         </div>
@@ -393,16 +401,16 @@
         </div>
 
         <div class="contact__links">
-          <a href="mailto:aayushbhatt0210@gmail.com" class="contact-item" aria-label="Email">
-            <img src="assets/images/gmail-logo-black.webp" alt="" class="contact-item__icon-img" />
+          <a href="mailto:aayushbhatt0210@gmail.com" class="contact-item" aria-label="Email Aayush Bhatt">
+            <img src="assets/images/gmail-logo-black.webp" alt="Gmail Icon" class="contact-item__icon-img" />
             <span class="contact-item__text">Email</span>
           </a>
-          <a href="https://www.linkedin.com/in/aayushbhattt/" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="LinkedIn">
-            <img src="assets/images/linkedin-logo-black.webp" alt="" class="contact-item__icon-img" />
+          <a href="https://www.linkedin.com/in/aayushbhattt/" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="Aayush Bhatt LinkedIn Profile">
+            <img src="assets/images/linkedin-logo-black.webp" alt="LinkedIn Icon" class="contact-item__icon-img" />
             <span class="contact-item__text">LinkedIn</span>
           </a>
-          <a href="https://github.com/aayushbhattt" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="GitHub">
-            <img src="assets/images/github-logo.webp" alt="" class="contact-item__icon-img" />
+          <a href="https://github.com/aayushbhattt" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="Aayush Bhatt GitHub Profile">
+            <img src="assets/images/github-logo.webp" alt="GitHub Icon" class="contact-item__icon-img" />
             <span class="contact-item__text">GitHub</span>
           </a>
           <a href="https://leetcode.com/u/aayushbhattt/" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="LeetCode">

@@ -17,8 +17,8 @@
   --color-border-hover: rgba(215, 35, 35, 0.35);
 
   /* Typography */
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-code: 'Fira Code', 'Courier New', monospace;
+  --font-body: 'Nunito', 'Inter', sans-serif;
+  --font-code: 'Cascadia Code', 'Space Mono', monospace;
 
   /* Font Sizes */
   --fs-xs:   0.75rem;    /* 12px */
@@ -75,10 +75,14 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  scroll-behavior: auto !important;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  scroll-behavior: auto !important;
 }
 
 ul,
@@ -166,6 +170,7 @@ p {
 
 .section {
   padding: var(--space-2xl) 0;
+  scroll-margin-top: var(--navbar-height);
 }
 
 .section-header {
@@ -200,6 +205,11 @@ p {
 
 /* Grid helpers */
 .grid { display: grid; }
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
 
 /* ─── 5. Reusable UI Components ─── */
 
