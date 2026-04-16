@@ -14,9 +14,11 @@
   flex-direction: column;
   align-items: flex-start;
   padding: var(--space-lg);
-  gap: var(--space-md);
+  gap: var(--space-sm);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-md);
 }
 
 .achievement-card:hover {
@@ -47,6 +49,18 @@
   font-size: var(--fs-lg);
   color: var(--color-text-primary);
   margin-top: var(--space-xs);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievement-card__content h4::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .achievement-card__content p {

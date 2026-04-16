@@ -70,7 +70,17 @@
 
 ---
 
-### Phase 4: Projects Page (/projects)
+### Phase 4: Certificates
+**Status**: ⬜ Not Started
+**Objective**: Build a "Certificates" category section after Achievements to showcase technical certifications and course completions.
+
+**Deliverables:**
+- `styles/certificates.css`
+- Certificate cards with gallery view or grid.
+
+---
+
+### Phase 5: Projects Page (/projects)
 **Status**: ⬜ Not Started
 **Objective**: Build the standalone `projects.html` page with all 4 projects, filterable by tech tag. Linked from "View All Projects" button on main page.
 
@@ -84,7 +94,7 @@
 
 ---
 
-### Phase 5: Animations, Polish & Deploy
+### Phase 6: Animations, Polish & Deploy
 **Status**: ⬜ Not Started
 **Objective**: Add scroll-triggered fade-in animations, hover effects, mobile responsiveness polish, SEO meta tags, and deploy to Netlify or GitHub Pages.
 
