@@ -30,3 +30,17 @@
 **Date:** 2026-04-15
 **Decision:** No /resume page or PDF download button in this version.
 **Reason:** User preference. Can add later.
+
+---
+
+## Phase 3 Decisions
+
+**Date:** 2026-04-16
+
+### Achievements Layout
+- **Decision**: Option A (Card Grid).
+- **Reason**: Balances scanning ease with technical depth.
+
+### Contact Section
+- **Decision**: Option A (Minimal Icons).
+- **Addition**: Added LeetCode link (https://leetcode.com/u/aayushbhattt/) and confirmed email (aayushbhatt0210@gmail.com).
