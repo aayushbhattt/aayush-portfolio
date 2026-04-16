@@ -10,10 +10,12 @@
 
 - SPEC.md finalized ✅
 - ROADMAP.md updated with 6 phases (added Certificates) ✅
-- Phase 1, 2, 3, 4 complete ✅
-- Phase 5 plans created: 3 plans, 2 waves ✅
+- Phase 1, 2, 3, 4, 5 complete ✅
+- Phase 6 plans created: 2 plans, 2 waves ✅
 
-## Phase 5 Plans
+## Phase 6 Plans
+- `.gsd/phases/6/1-PLAN.md` — High-Viz Polish & Certificates Overhaul (Wave 1)
+- `.gsd/phases/6/2-PLAN.md` — Cinematic Navigation & Animations (Wave 2)
 - `.gsd/phases/5/1-PLAN.md` — Bug Fixes & Refinements (Wave 1)
 - `.gsd/phases/5/2-PLAN.md` — Standalone Projects Setup & Filtering (Wave 1)
 - `.gsd/phases/5/3-PLAN.md` — Project Cards & Detail Modal (Wave 2)
