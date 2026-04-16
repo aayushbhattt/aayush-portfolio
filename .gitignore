@@ -1,0 +1,17 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Agentic / AI Assistant Files
+.gemini/
+.agent/
+.agents/
+.gsd/
+
+# Documentation & Scratch Files
+docs/
+
+# Build Artifacts
+node_modules/
+dist/
+*.log

@@ -90,7 +90,7 @@
 
 /* Name */
 .hero__name {
-  font-size: var(--fs-5xl);
+  font-size: 4.5rem;
   font-weight: var(--fw-bold);
   color: var(--color-text-primary);
   line-height: 1.05;
@@ -105,10 +105,10 @@
   display: flex;
   align-items: center;
   gap: 3px;
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-3xl);
   font-weight: var(--fw-medium);
   color: var(--color-text-secondary);
-  min-height: 2.2rem;
+  min-height: 2.8rem;
   margin-bottom: var(--space-md);
   opacity: 0;
   animation: heroFadeUp 0.6s ease 0.4s forwards;
@@ -133,9 +133,9 @@
 
 /* Bio */
 .hero__bio {
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
   color: var(--color-text-secondary);
-  max-width: 540px;
+  max-width: 600px;
   line-height: 1.75;
   margin-bottom: var(--space-xl);
   opacity: 0;

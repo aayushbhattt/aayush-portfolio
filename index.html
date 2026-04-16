@@ -10,15 +10,27 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://aayushbhatt.com" />
 
-    <!-- Open Graph (fix + add image) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Aayush Bhatt | Full Stack Developer" />
-    <meta property="og:description" content="Aayush Bhatt is a Full Stack Developer and AI/ML student skilled in React, Firebase, and scalable web applications." />
-    <meta property="og:url" content="https://aayushbhatt.com" />
-    <meta property="og:image" content="https://aayushbhatt.com/preview.png" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aayush Bhatt | Full Stack Developer" />
+    <meta name="twitter:description" content="Full Stack Developer & AI/ML student. Building scalable web applications." />
+    <meta name="twitter:image" content="https://aayushbhatt.com/preview.png" />
+
+    <!-- Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Performance: Preload critical assets -->
+    <link rel="preload" href="styles/main.css" as="style" />
+    <link rel="preload" href="assets/images/profile.webp" as="image" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo/logo-black.svg" />
 
     <script type="application/ld+json">
     {
@@ -428,7 +440,7 @@
     <!-- ─── Footer ─── -->
     <footer class="footer">
       <div class="container footer__inner">
-        <p class="footer__text">&copy; 2026 Aayush Bhatt. Built with passion and ☕.</p>
+        <p class="footer__text">&copy; 2026 Aayush Bhatt. Built with passion.</p>
         <div class="footer__scroll-top">
           <a href="#home" class="nav-link">Back to Top ↑</a>
         </div>
