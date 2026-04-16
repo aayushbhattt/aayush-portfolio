@@ -39,9 +39,9 @@
     <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/about.css" />
     <link rel="stylesheet" href="styles/skills.css" />
-    <link rel="stylesheet" href="styles/projects.css" />
     <link rel="stylesheet" href="styles/achievements.css" />
     <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/certificates.css">
   </head>
   <body>
     <!-- ─── Navbar ─── -->
@@ -51,7 +51,7 @@
         <ul class="navbar__links" id="navLinks">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#achievements" class="nav-link">Achievements</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -88,10 +88,6 @@
           <a href="#contact" class="btn-outline" id="hero-contact"
             >Get In Touch</a
           >
-        </div>
-        <div class="hero__scroll-hint">
-          <span>Scroll</span>
-          <div class="hero__scroll-line"></div>
         </div>
       </div>
     </section>
@@ -174,136 +170,104 @@
     <section class="projects section reveal-hidden" id="projects">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Featured <span>Projects</span></h2>
+          <h2 class="section-title">Case <span>Studies</span></h2>
           <div class="divider"></div>
           <p class="section-subtitle">
-            A selection of my best work, ranging from AI applications to
-            administrative platforms.
+            A deep dive into some of the applications I've built, focusing on problem-solving, architecture, and user impact.
           </p>
         </div>
 
-        <div class="projects__grid">
-          <!-- Project 1: VST Admin -->
-          <article class="project-card card">
-            <div class="project-card__image">
-              <div class="project-card__placeholder">
-                <span>Admin Dash</span>
-              </div>
-            </div>
+        <!-- Full Projects Grid -->
+        <div class="projects__grid" id="allProjectsGrid">
+          
+          <!-- Project 1: Study Buddy -->
+          <article class="project-card card" data-category="react ai firebase" tabindex="0" role="button">
             <div class="project-card__content">
               <header class="project-card__header">
-                <span class="tag">Featured</span>
-                <h3 class="project-card__title">VST OpenSource Admin</h3>
-              </header>
-              <p class="project-card__desc">
-                Comprehensive admin dashboard with 200 daily active users,
-                featuring virtual scrolling, CI/CD, and real-time analytics.
-              </p>
-              <div class="project-card__tech">
-                <span class="tag">React</span>
-                <span class="tag">Firebase</span>
-                <span class="tag">GitHub API</span>
-              </div>
-              <footer class="project-card__links">
-                <a
-                  href="https://github.com/vstopensource-gif/Vedam-OpenSource-Admin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="nav-link"
-                  >GitHub ↗</a
-                >
-              </footer>
-            </div>
-          </article>
-
-          <!-- Project 2: Study Buddy -->
-          <article class="project-card card">
-            <div class="project-card__image">
-              <div class="project-card__placeholder">
-                <span>Study Buddy</span>
-              </div>
-            </div>
-            <div class="project-card__content">
-              <header class="project-card__header">
-                <span class="tag">Hackathon Winning Project</span>
+                <span class="tag">🏆 Hackathon Winning Project</span>
                 <h3 class="project-card__title">Study Buddy</h3>
               </header>
               <p class="project-card__desc">
-                AI-powered Java practice platform with real-time execution and
-                Gemini AI code review. 2nd place at InnoveDAM.
+                AI Code Review & Practice Platform with browser-based execution, automated feedback via Gemini AI, and real-time multiplayer progress tracking.
               </p>
               <div class="project-card__tech">
                 <span class="tag">React</span>
+                <span class="tag">Vite</span>
                 <span class="tag">Firebase</span>
                 <span class="tag">Gemini AI</span>
               </div>
-              <footer class="project-card__links">
-                <a
-                  href="https://github.com/aayushbhattt/Study_Buddy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="nav-link"
-                  >GitHub ↗</a
-                >
-                <a
-                  href="https://studybuddytest12.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="nav-link"
-                  >Live Demo ↗</a
-                >
-              </footer>
             </div>
           </article>
 
-          <!-- Project 3: Money Manage -->
-          <article class="project-card card">
-            <div class="project-card__image">
-              <div class="project-card__placeholder">
-                <span>Money Manage</span>
-              </div>
-            </div>
+          <!-- Project 2: Money Manage -->
+          <article class="project-card card" data-category="vanilla firebase" tabindex="0" role="button">
             <div class="project-card__content">
               <header class="project-card__header">
                 <span class="tag">Personal</span>
                 <h3 class="project-card__title">Money Manage</h3>
               </header>
               <p class="project-card__desc">
-                Expense tracker with real-time sync across devices and analytics
-                dashboards handling 50+ transactions.
+                Personal expense tracking web application with full CRUD operations, multi-device sync, and rich analytics dashboards.
               </p>
               <div class="project-card__tech">
-                <span class="tag">HTML/JS</span>
+                <span class="tag">Vanilla JS</span>
                 <span class="tag">Firebase</span>
                 <span class="tag">Chart.js</span>
               </div>
-              <footer class="project-card__links">
-                <a
-                  href="https://github.com/aayushbhattt/Money-Tracker"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="nav-link"
-                  >GitHub ↗</a
-                >
-                <a
-                  href="https://moneytracker207.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="nav-link"
-                  >Live Demo ↗</a
-                >
-              </footer>
+            </div>
+          </article>
+
+          <!-- Project 3: Image Quiz -->
+          <article class="project-card card" data-category="vanilla firebase" tabindex="0" role="button">
+            <div class="project-card__content">
+              <header class="project-card__header">
+                <span class="tag">Event Ready</span>
+                <h3 class="project-card__title">Image Quiz Application</h3>
+              </header>
+              <p class="project-card__desc">
+                Real-time image-based quiz platform featuring a live leaderboard, scoring engine, and admin control dashboard.
+              </p>
+              <div class="project-card__tech">
+                <span class="tag">Vanilla JS</span>
+                <span class="tag">Firebase</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: VST Admin -->
+          <article class="project-card card" data-category="react firebase" tabindex="0" role="button">
+            <div class="project-card__content">
+              <header class="project-card__header">
+                <span class="tag">Open Source</span>
+                <h3 class="project-card__title">VST OpenSource Admin</h3>
+              </header>
+              <p class="project-card__desc">
+                Admin dashboard managing open-source contributions. Features GitHub API integration and CI/CD pipelines.
+              </p>
+              <div class="project-card__tech">
+                <span class="tag">React</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">GitHub API</span>
+              </div>
             </div>
           </article>
         </div>
-
-        <div class="projects__cta">
-          <a href="projects.html" class="btn-outline"
-            >View All Projects <span>→</span></a
-          >
-        </div>
       </div>
     </section>
+
+    <!-- Modal Template for Projects -->
+    <div class="modal hidden" id="projectModal">
+      <div class="modal__backdrop" id="modalBackdrop"></div>
+      <div class="modal__content">
+        <button class="modal__close" id="modalClose" aria-label="Close modal">&times;</button>
+        <div class="modal__body">
+          <h2 id="modalTitle">Project Title</h2>
+          <div class="modal__tech" id="modalTech"></div>
+          <p id="modalDesc">Full detailed description of the project goes here.</p>
+          <div class="modal__links" id="modalLinks"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- ─── Achievements ─── -->
     <section class="achievements section reveal-hidden" id="achievements">

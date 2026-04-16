@@ -107,3 +107,5 @@
 - Site live on public URL
 
 **Requirements:** All success criteria from SPEC.md checked off. Deployed link working.
+### Phase 7: Site Consolidation
+Merge all project content into the main page, unify styles/logic, and remove standalone subpages.
