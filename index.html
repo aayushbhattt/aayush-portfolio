@@ -10,8 +10,23 @@
       name="description"
       content="Aayush Bhatt is a Full Stack Developer and AI/ML student skilled in React, Firebase, and scalable web applications. Explore projects, achievements, and contact details."
     />
+    <meta
+      name="keywords"
+      content="Aayush Bhatt, Full Stack Developer, React, Firebase, Portfolio, Vedam, Pune, AI/ML, B.Tech CSE"
+    />
+    <meta name="author" content="Aayush Bhatt" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://aayushbhatt.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aayush Bhatt | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Aayush Bhatt is a Full Stack Developer and AI/ML student skilled in React, Firebase, and scalable web applications."
+    />
+    <meta property="og:url" content="https://aayushbhatt.com" />
+    <meta property="og:image" content="https://aayushbhatt.com/preview.png" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -57,6 +72,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@200..700&family=Nunito:wght@200..1000&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
     />
 
     <!-- Styles — order matters -->
@@ -165,35 +184,53 @@
           <div class="skills__category card">
             <h4>Languages</h4>
             <div class="skills__list">
-              <span class="tag">Python</span>
-              <span class="tag">Java</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
+              <span class="tag"
+                ><i class="devicon-python-plain"></i> Python</span
+              >
+              <span class="tag"><i class="devicon-java-plain"></i> Java</span>
+              <span class="tag"
+                ><i class="devicon-javascript-plain"></i> JavaScript</span
+              >
+              <span class="tag"><i class="devicon-html5-plain"></i> HTML</span>
+              <span class="tag"><i class="devicon-css3-plain"></i> CSS</span>
             </div>
           </div>
           <div class="skills__category card">
             <h4>Frameworks</h4>
             <div class="skills__list">
-              <span class="tag">React</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">Django</span>
+              <span class="tag"
+                ><i class="devicon-react-original"></i> React</span
+              >
+              <span class="tag"
+                ><i class="devicon-nextjs-original"></i> Next.js</span
+              >
+              <span class="tag"
+                ><i class="devicon-django-plain"></i> Django</span
+              >
             </div>
           </div>
           <div class="skills__category card">
             <h4>Databases</h4>
             <div class="skills__list">
-              <span class="tag">MySQL</span>
-              <span class="tag">Firebase</span>
-              <span class="tag">Supabase</span>
+              <span class="tag"><i class="devicon-mysql-plain"></i> MySQL</span>
+              <span class="tag"
+                ><i class="devicon-firebase-plain"></i> Firebase</span
+              >
+              <span class="tag"
+                ><i class="devicon-supabase-plain"></i> Supabase</span
+              >
             </div>
           </div>
           <div class="skills__category card">
             <h4>Tools & Platforms</h4>
             <div class="skills__list">
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
-              <span class="tag">Netlify</span>
+              <span class="tag"><i class="devicon-git-plain"></i> Git</span>
+              <span class="tag"
+                ><i class="devicon-github-original"></i> GitHub</span
+              >
+              <span class="tag"
+                ><i class="devicon-netlify-plain"></i> Netlify</span
+              >
               <span class="tag">REST APIs</span>
             </div>
           </div>
@@ -224,13 +261,14 @@
           >
             <div class="project-card__content">
               <header class="project-card__header">
-                <span class="tag">🏆 Hackathon Winning Project</span>
+                <span class="tag">Hackathon Winning Project</span>
                 <h3 class="project-card__title">Study Buddy</h3>
               </header>
               <p class="project-card__desc">
-                AI Code Review & Practice Platform with browser-based execution,
-                automated feedback via Gemini AI, and real-time multiplayer
-                progress tracking.
+                A comprehensive AI-powered code review and practice platform.
+                Features a browser-based IDE environment with real-time
+                multiplayer progress tracking and automated, intelligent
+                feedback powered by Gemini AI.
               </p>
               <div class="project-card__tech">
                 <span class="tag">React</span>
@@ -254,8 +292,10 @@
                 <h3 class="project-card__title">Money Manage</h3>
               </header>
               <p class="project-card__desc">
-                Personal expense tracking web application with full CRUD
-                operations, multi-device sync, and rich analytics dashboards.
+                A robust personal finance tracker featuring interactive data
+                visualization with Chart.js. Implements secure Firebase
+                authentication and real-time cloud synchronization for
+                multi-device expense management.
               </p>
               <div class="project-card__tech">
                 <span class="tag">Vanilla JS</span>
@@ -278,8 +318,10 @@
                 <h3 class="project-card__title">Image Quiz Application</h3>
               </header>
               <p class="project-card__desc">
-                Real-time image-based quiz platform featuring a live
-                leaderboard, scoring engine, and admin control dashboard.
+                A high-engagement real-time quiz platform with a dynamic
+                leaderboard system. Features a custom scoring engine and a
+                dedicated admin dashboard for live quiz orchestration and user
+                management.
               </p>
               <div class="project-card__tech">
                 <span class="tag">Vanilla JS</span>
@@ -301,8 +343,9 @@
                 <h3 class="project-card__title">VST OpenSource Admin</h3>
               </header>
               <p class="project-card__desc">
-                Admin dashboard managing open-source contributions. Features
-                GitHub API integration and CI/CD pipelines.
+                An advanced administrative dashboard for tracking open-source
+                contributions. Integrates GitHub API for real-time data fetching
+                and utilizes automated CI/CD pipelines for scalable deployment.
               </p>
               <div class="project-card__tech">
                 <span class="tag">React</span>
@@ -347,7 +390,7 @@
 
         <div class="achievements__grid">
           <!-- Achievement 1: President -->
-          <div class="achievement-card card">
+          <div class="achievement-card card grid-col-2">
             <div class="achievement-card__content">
               <span class="tag">Leadership</span>
               <h4>President — Competitive Code Club</h4>
@@ -371,7 +414,7 @@
           </div>
 
           <!-- Achievement 3: Hackathon -->
-          <div class="achievement-card card">
+          <div class="achievement-card card grid-col-2">
             <div class="achievement-card__content">
               <span class="tag">Technical</span>
               <h4>2nd Place — InnoVEDAM Hackathon</h4>
