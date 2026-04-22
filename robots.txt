@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /docs/
 
-Sitemap: https://aayushbhatt.com/sitemap.xml
+Sitemap: https://aayushbhatt.in/sitemap.xml
