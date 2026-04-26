@@ -324,7 +324,7 @@
         <div class="projects__grid" id="allProjectsGrid">
           <!-- Project 1: Study Buddy -->
           <article
-            class="project-card card"
+            class="project-card card grid-col-2"
             data-category="react ai firebase"
             tabindex="0"
             role="button"
@@ -419,12 +419,39 @@
               <p class="project-card__desc">
                 An advanced administrative dashboard for tracking open-source
                 contributions. Integrates GitHub API for real-time data fetching
-                and utilizes automated CI/CD pipelines for scalable deployment.
+                and utilizes automated CI/CD pipelines.
               </p>
               <div class="project-card__tech">
                 <span class="tag">React</span>
                 <span class="tag">Firebase</span>
                 <span class="tag">GitHub API</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Golf Charity Platform -->
+          <article
+            class="project-card card"
+            data-category="react firebase node"
+            tabindex="0"
+            role="button"
+            onclick="window.location.href='projects/golfcharity.html'"
+          >
+            <div class="project-card__content">
+              <header class="project-card__header">
+                <span class="tag">Event Management</span>
+                <h3 class="project-card__title">Golf Charity Platform</h3>
+              </header>
+              <p class="project-card__desc">
+                A full-stack event management system for golf charity draws. 
+                Features automated email orchestration via Resend API and real-time 
+                financial tracking via Firebase.
+              </p>
+              <div class="project-card__tech">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Resend API</span>
               </div>
             </div>
           </article>

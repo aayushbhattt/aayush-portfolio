@@ -405,7 +405,13 @@ p {
    projects.css — Featured Projects Section
    ============================================================ */
 
-.projects__grid,
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
 .achievements__grid,
 .certificates__grid {
   display: grid;
