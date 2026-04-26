@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Aayush Bhatt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@200..700&family=Nunito:wght@200..1000&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="stylesheet" href="styles/cursor.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo/logo-black.svg" />
+  </head>
+  <body>
+    <!-- ─── Custom Cursor ─── -->
+    <div class="custom-cursor" id="customCursor"></div>
+    
+    <!-- ─── Navbar ─── -->
+    <header class="navbar scrolled" id="navbar">
+      <nav class="container navbar__inner">
+        <a href="index.html" class="navbar__logo">Aayush Bhatt<span>.</span></a>
+        <ul class="navbar__links" id="navLinks">
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="index.html#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="index.html#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="section" style="padding-top: 150px; min-height: 80vh;">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">All <span>Case Studies</span></h1>
+          <div class="divider"></div>
+          <p class="section-subtitle">A deep dive into the applications I've built, focusing on problem-solving, architecture, and user impact.</p>
+        </div>
+
+        <div class="projects__grid" id="projectsGrid">
+          
+          <article class="project-card card" onclick="window.location.href='projects/studybuddy.html'" tabindex="0" role="button" aria-label="View case study for Study Buddy">
+            <div class="project-card__content">
+              <header class="project-card__header">
+                <h3 class="project-card__title">Study Buddy</h3>
+              </header>
+              <p class="project-card__desc">AI-Powered Learning Ecosystem</p>
+              <div class="project-card__tech">
+                <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Firebase</span><span class="tag">Gemini 2.0 AI</span><span class="tag">Piston API</span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="project-card card" onclick="window.location.href='projects/moneymanage.html'" tabindex="0" role="button" aria-label="View case study for Money Manage">
+            <div class="project-card__content">
+              <header class="project-card__header">
+                <h3 class="project-card__title">Money Manage</h3>
+              </header>
+              <p class="project-card__desc">Mobile-first personal finance tracker with real-time cloud sync</p>
+              <div class="project-card__tech">
+                <span class="tag">Vanilla JS</span><span class="tag">Firebase</span><span class="tag">Chart.js</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card card" onclick="window.location.href='projects/imagequiz.html'" tabindex="0" role="button" aria-label="View case study for Image Quiz Application">
+            <div class="project-card__content">
+              <header class="project-card__header">
+                <h3 class="project-card__title">Image Quiz Application</h3>
+              </header>
+              <p class="project-card__desc">Real-time multiplayer event platform</p>
+              <div class="project-card__tech">
+                <span class="tag">Vanilla JS</span><span class="tag">Firebase</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card card" onclick="window.location.href='projects/vstadmin.html'" tabindex="0" role="button" aria-label="View case study for VST OpenSource Admin">
+            <div class="project-card__content">
+              <header class="project-card__header">
+                <h3 class="project-card__title">VST OpenSource Admin</h3>
+              </header>
+              <p class="project-card__desc">Centralized dashboard for tracking Vedam's open-source health</p>
+              <div class="project-card__tech">
+                <span class="tag">React</span><span class="tag">Firebase</span><span class="tag">GitHub API</span><span class="tag">TailwindCSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card card" onclick="window.location.href='projects/golfcharity.html'" tabindex="0" role="button" aria-label="View case study for Golf Charity Platform">
+            <div class="project-card__content">
+              <header class="project-card__header">
+                <h3 class="project-card__title">Golf Charity Platform</h3>
+              </header>
+              <p class="project-card__desc">Comprehensive event management and sponsorship portal for the Golf Charity initiative.</p>
+              <div class="project-card__tech">
+                <span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Resend API</span><span class="tag">TailwindCSS</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- ─── Footer ─── -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__text">&copy; 2026 Aayush Bhatt. Built with passion.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script>
+      // Accessibility for keyboard navigation
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

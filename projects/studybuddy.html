@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Buddy Case Study | Aayush Bhatt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@200..700&family=Nunito:wght@200..1000&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/cursor.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/logo-black.svg" />
+    <style>
+      .case-study { max-width: 800px; margin: 0 auto; padding-top: 150px; padding-bottom: 80px; }
+      .cs-header { margin-bottom: 40px; animation: fadeIn 0.8s ease-out; }
+      .cs-title { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 10px; color: var(--text); }
+      .cs-tagline { font-size: 1.2rem; color: var(--text-light); margin-bottom: 25px; line-height: 1.6; }
+      .cs-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+      .cs-links a { margin-right: 15px; margin-bottom: 10px; display: inline-block; }
+      .cs-section { background: var(--bg-card); padding: 40px; border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.05); animation: slideUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+      .cs-section:nth-child(2) { animation-delay: 0.1s; }
+      .cs-section:nth-child(3) { animation-delay: 0.2s; }
+      .cs-section:nth-child(4) { animation-delay: 0.3s; }
+      .cs-section h2, .cs-section h3 { color: var(--accent); margin-bottom: 20px; font-family: 'Space Mono', monospace; display: flex; align-items: center; gap: 10px; }
+      .cs-section h2 { font-size: 1.5rem; }
+      .cs-section h3 { font-size: 1.2rem; margin-top: 30px; }
+      .cs-section h2::before, .cs-section h3::before { content: ''; width: 20px; height: 2px; background: var(--accent); display: inline-block; }
+      .cs-section p { color: var(--text-light); line-height: 1.8; margin-bottom: 15px; font-size: 1.05rem; }
+      .feature-list { list-style: none; padding: 0; }
+      .feature-list li { margin-bottom: 20px; padding-left: 25px; position: relative; line-height: 1.6; color: var(--text-light); }
+      .feature-list li::before { content: '▹'; position: absolute; left: 0; top: 2px; color: var(--accent); font-size: 1.2rem; }
+      .feature-list strong { color: var(--text); display: inline-block; margin-bottom: 4px; font-size: 1.1rem; }
+      .tech-stack-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+      .tech-stack-table th { text-align: left; padding: 15px 0; color: var(--text); border-bottom: 2px solid rgba(255,255,255,0.1); }
+      .tech-stack-table td { padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-light); line-height: 1.6; }
+      .tech-stack-table tr:last-child td { border-bottom: none; }
+      .tech-stack-table td:first-child { font-weight: bold; color: var(--text); width: 30%; padding-right: 20px; }
+      .back-btn { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 30px; color: var(--text-light); text-decoration: none; transition: color 0.3s, transform 0.3s; font-family: 'Space Mono', monospace; }
+      .back-btn:hover { color: var(--accent); transform: translateX(-5px); }
+      pre { background: #1e1e1e; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.9rem; color: #d4d4d4; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.1); }
+      code { font-family: 'Fira Code', monospace; }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cs-header, .cs-section {
+          animation: none !important;
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .cs-section { padding: 25px; }
+        .tech-stack-table td, .tech-stack-table th { display: block; width: 100%; padding: 10px 0; }
+        .tech-stack-table td:first-child { padding-bottom: 0; border-bottom: none; color: var(--accent); }
+        .tech-stack-table tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .tech-stack-table tr:last-child { border-bottom: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-cursor" id="customCursor"></div>
+    
+    <header class="navbar scrolled" id="navbar">
+      <nav class="container navbar__inner">
+        <a href="../index.html" class="navbar__logo">Aayush Bhatt<span>.</span></a>
+        <ul class="navbar__links" id="navLinks">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="../index.html#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="container case-study">
+      <a href="../projects.html" class="back-btn">← All Projects</a>
+      
+      <header class="cs-header">
+        <h1 class="cs-title">Study Buddy</h1>
+        <p class="cs-tagline">AI-Powered Learning Ecosystem</p>
+        <div class="cs-tags">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Gemini 2.0 AI</span>
+          <span class="tag">Piston API</span>
+        </div>
+        <div class="cs-links">
+          <a href="https://studybuddytest12.netlify.app/" target="_blank" class="btn-primary">View Live ↗</a>
+          <a href="https://github.com/aayushbhattt/Study_Buddy" target="_blank" class="btn-outline">GitHub Repo ↗</a>
+        </div>
+      </header>
+
+      <section class="cs-section">
+        <h2>Overview</h2>
+        <p><strong>Study Buddy</strong> is a sophisticated, AI-integrated educational platform designed to bridge the gap between assessment and improvement. Built on a modern tech stack, it provides students with a seamless coding environment, real-time performance analytics, and a "Smart Practice" engine that adapts to their unique learning curve.</p>
+        <p>This project secured 2nd place among 24 teams at the InnoVedam 24-Hour Hackathon.</p>
+      </section>
+
+      <section class="cs-section">
+        <h2>Core Pillars</h2>
+        <h3>Precision Analytics</h3>
+        <ul class="feature-list">
+          <li><strong>Vedam Merit Scores:</strong> Track normalized performance across Maths, Java, and Web.</li>
+          <li><strong>Dynamic Milestones:</strong> Hard-coded logic for Innovation Eligibility (60%) and Placement Eligibility (75%).</li>
+          <li><strong>Historical Trends:</strong> AI-generated reports that synthesize past performance into actionable insights.</li>
+        </ul>
+
+        <h3>Java IDE & Smart Submission</h3>
+        <ul class="feature-list">
+          <li><strong>Monaco-Powered Editor:</strong> A premium, VS-Code style coding interface.</li>
+          <li><strong>Piston Integration:</strong> Real-time code execution and automated test case validation.</li>
+          <li><strong>AI Feedback Loop:</strong> Instant, hyper-detailed evaluation of submissions, identifying strengths, weaknesses, and optimization paths.</li>
+        </ul>
+
+        <h3>Smart Practice Engine</h3>
+        <ul class="feature-list">
+          <li><strong>Weighted Topic Probability:</strong> Our practice generator uses a weighted algorithm based on Topic Frequency and Student Weaknesses.</li>
+          <li><strong>On-Demand Quizzes:</strong> AI-generated MCQ quizzes for any topic, with difficulty spanning Easy to Hard.</li>
+        </ul>
+      </section>
+
+      <section class="cs-section">
+        <h2>Architecture & Data Flow</h2>
+        <p>Study Buddy utilizes a decoupled architecture where the frontend interacts with specialized micro-services via Firebase and AI layers. When a student submits code, a complex multi-stage process is triggered:</p>
+        <ol class="feature-list" style="padding-left: 10px;">
+          <li><strong>Code Validation:</strong> Piston runs the code against hard test cases.</li>
+          <li><strong>AI Heuristics:</strong> The evaluation service analyzes code structure and efficiency.</li>
+          <li><strong>Topic Mapping:</strong> AI maps the submission to specific curriculum topics (e.g., Recursion, Arrays).</li>
+          <li><strong>Strength Updating:</strong> Calculates new strength ratings (Weak → Strong).</li>
+          <li><strong>Gap Filling:</strong> AI generates tailored practice questions to address identified weaknesses.</li>
+        </ol>
+      </section>
+
+      <section class="cs-section">
+        <h2>Admin Mastery & Bulk Upload</h2>
+        <p>Study Buddy provides a powerful Admin Panel for mentors to manage contests and process bulk results efficiently using optimized JSON intake systems.</p>
+        
+        <h3>Contest Configuration Example</h3>
+<pre><code>{
+  "contestTitle": "Java Loops Mastery",
+  "difficulty": "medium",
+  "questions": [
+    {
+      "title": "Nested Triangle Pattern",
+      "description": "Output a triangle of height N...",
+      "expectedSolution": "public class Solution...",
+      "testCases": [{"input": "5", "expectedOutput": "*\n**..."}]
+    }
+  ]
+}</code></pre>
+      </section>
+
+      <section class="cs-section">
+        <h2>Tech Stack Deep Dive</h2>
+        <table class="tech-stack-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Technology</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Frontend</td>
+              <td>React 18 / Vite</td>
+              <td>Core framework and HMR</td>
+            </tr>
+            <tr>
+              <td>Logic</td>
+              <td>Javascript (ESM)</td>
+              <td>Complex service implementations</td>
+            </tr>
+            <tr>
+              <td>Database</td>
+              <td>Firebase Firestore</td>
+              <td>Real-time NoSQL storage</td>
+            </tr>
+            <tr>
+              <td>Auth</td>
+              <td>Firebase Auth</td>
+              <td>Domain-restricted SSO (@vedamsot.org)</td>
+            </tr>
+            <tr>
+              <td>AI Processing</td>
+              <td>Gemini 2.0</td>
+              <td>Reasoning engine for quizzes and evaluations</td>
+            </tr>
+            <tr>
+              <td>Execution Engine</td>
+              <td>Piston API / Monaco</td>
+              <td>Real-time code execution and IDE interface</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__text">&copy; 2026 Aayush Bhatt. Built with passion.</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cursor.js"></script>
+  </body>
+</html>

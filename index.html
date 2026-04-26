@@ -153,8 +153,12 @@
     <link rel="stylesheet" href="styles/achievements.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/certificates.css" />
+    <link rel="stylesheet" href="styles/cursor.css" />
   </head>
   <body>
+    <!-- ─── Custom Cursor ─── -->
+    <div class="custom-cursor" id="customCursor"></div>
+
     <!-- ─── Navbar ─── -->
     <header class="navbar" id="navbar">
       <nav class="container navbar__inner">
@@ -162,7 +166,7 @@
         <ul class="navbar__links" id="navLinks">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
           <li><a href="#achievements" class="nav-link">Achievements</a></li>
           <li><a href="#certificates" class="nav-link">Certificates</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -324,6 +328,7 @@
             data-category="react ai firebase"
             tabindex="0"
             role="button"
+            onclick="window.location.href='projects/studybuddy.html'"
           >
             <div class="project-card__content">
               <header class="project-card__header">
@@ -351,6 +356,7 @@
             data-category="vanilla firebase"
             tabindex="0"
             role="button"
+            onclick="window.location.href='projects/moneymanage.html'"
           >
             <div class="project-card__content">
               <header class="project-card__header">
@@ -377,6 +383,7 @@
             data-category="vanilla firebase"
             tabindex="0"
             role="button"
+            onclick="window.location.href='projects/imagequiz.html'"
           >
             <div class="project-card__content">
               <header class="project-card__header">
@@ -402,6 +409,7 @@
             data-category="react firebase"
             tabindex="0"
             role="button"
+            onclick="window.location.href='projects/vstadmin.html'"
           >
             <div class="project-card__content">
               <header class="project-card__header">
@@ -421,26 +429,14 @@
             </div>
           </article>
         </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="projects.html" class="btn-primary" style="display: inline-block;">View All Case Studies <span>→</span></a>
+        </div>
       </div>
     </section>
 
-    <!-- Modal Template for Projects -->
-    <div class="modal hidden" id="projectModal">
-      <div class="modal__backdrop" id="modalBackdrop"></div>
-      <div class="modal__content">
-        <button class="modal__close" id="modalClose" aria-label="Close modal">
-          &times;
-        </button>
-        <div class="modal__body">
-          <h2 id="modalTitle">Project Title</h2>
-          <div class="modal__tech" id="modalTech"></div>
-          <p id="modalDesc">
-            Full detailed description of the project goes here.
-          </p>
-          <div class="modal__links" id="modalLinks"></div>
-        </div>
-      </div>
-    </div>
+    <!-- Modal Removed (Replaced by Case Study pages) -->
 
     <!-- ─── Achievements ─── -->
     <section class="achievements section reveal-hidden" id="achievements">
@@ -613,7 +609,7 @@
             <span class="contact-item__text">Email</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/aayushbhattt/"
+            href="https://www.linkedin.com/in/aayushbhatt210/"
             target="_blank"
             rel="noopener noreferrer"
             class="contact-item"
@@ -627,7 +623,7 @@
             <span class="contact-item__text">LinkedIn</span>
           </a>
           <a
-            href="https://github.com/aayushbhattt"
+            href="https://github.com/aayushbhatt210"
             target="_blank"
             rel="noopener noreferrer"
             class="contact-item"
@@ -655,7 +651,7 @@
             <span class="contact-item__text">LeetCode</span>
           </a>
           <a
-            href="https://www.instagram.com/aayush_bhattt/"
+            href="https://www.instagram.com/aayushbhatt210/"
             target="_blank"
             rel="noopener noreferrer"
             class="contact-item"
@@ -685,5 +681,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
   </body>
 </html>

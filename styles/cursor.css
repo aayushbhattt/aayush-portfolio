@@ -1,0 +1,42 @@
+/* ============================================================
+   Custom Laser Red Dot Cursor
+   ============================================================ */
+
+/* Hide default cursor only when custom cursor is active */
+.custom-cursor-active, .custom-cursor-active * {
+  cursor: none !important;
+}
+
+/* Custom Cursor Element */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent, #D72323);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  /* Smooth follow delay */
+  transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border 0.2s ease-out;
+  /* Laser glow effect */
+  box-shadow: 0 0 10px var(--accent, #D72323), 0 0 20px var(--accent, #D72323);
+}
+
+/* Hover state on clickable elements */
+.custom-cursor.hovering {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(215, 35, 35, 0.1);
+  border: 1.5px solid var(--accent, #D72323);
+  box-shadow: 0 0 15px rgba(215, 35, 35, 0.4);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
