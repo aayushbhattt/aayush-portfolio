@@ -2,8 +2,8 @@
    Custom Laser Red Dot Cursor
    ============================================================ */
 
-/* Hide default cursor only when custom cursor is active */
-.custom-cursor-active, .custom-cursor-active * {
+/* Hide default cursor globally */
+html, body, *, *::before, *::after {
   cursor: none !important;
 }
 
