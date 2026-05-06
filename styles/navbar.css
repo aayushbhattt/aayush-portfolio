@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 2000;
   height: var(--navbar-height);
   background: transparent;
   transition:
@@ -34,12 +34,13 @@
 
 /* ─── Logo ─── */
 .navbar__logo {
-  font-size: var(--fs-2xl);
+  font-size: 1.75rem;
   font-weight: var(--fw-bold);
   color: var(--color-text-primary);
   letter-spacing: -0.03em;
   transition: opacity var(--transition-fast);
   flex-shrink: 0;
+  z-index: 2100;
 }
 
 .navbar__logo span {
@@ -59,7 +60,7 @@
 }
 
 .nav-link {
-  font-size: var(--fs-base);
+  font-size: 1.1rem;
   font-weight: var(--fw-medium);
   color: var(--color-text-secondary);
   position: relative;
@@ -103,7 +104,7 @@
   cursor: pointer;
   background: none;
   border: none;
-  z-index: 1100;
+  z-index: 2100;
 }
 
 .navbar__hamburger span {
@@ -137,18 +138,20 @@
   .navbar__links {
     display: none;
     position: fixed;
-    top: var(--navbar-height);
+    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: var(--space-xl);
-    padding: var(--space-xl);
+    padding: 25vh var(--space-xl) var(--space-xl);
+    z-index: 2050;
+    pointer-events: all;
   }
 
   .navbar__links.open {

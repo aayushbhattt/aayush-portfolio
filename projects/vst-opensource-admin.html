@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VST Admin Case Study | Aayush Bhatt</title>
+    <title>Vedam Open Admin Case Study | Aayush Bhatt</title>
+    <meta name="description" content="Detailed case study of Vedam Open Admin, a management suite for organization leads." />
+    <meta name="keywords" content="Vedam Open Admin, GitHub Integration, Firebase, Vanilla JS, Aayush Bhatt, Portfolio" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@200..700&family=Nunito:wght@200..1000&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -13,7 +16,7 @@
     <link rel="stylesheet" href="../styles/cursor.css" />
     <link rel="icon" type="image/svg+xml" href="../assets/logo/logo-black.svg" />
     <style>
-      .case-study { max-width: 1100px; margin: 0 auto; padding-top: 150px; padding-bottom: 80px; }
+      .case-study { max-width: 1250px; margin: 0 auto; padding-top: 150px; padding-bottom: 80px; }
       .cs-header { margin-bottom: 40px; animation: fadeIn 0.8s ease-out; }
       .cs-title { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 10px; color: var(--text); }
       .cs-tagline { font-size: 1.2rem; color: var(--text-light); margin-bottom: 25px; line-height: 1.6; }
@@ -39,7 +42,7 @@
       .tech-stack-table td:first-child { font-weight: bold; color: var(--text); width: 30%; padding-right: 20px; }
       .back-btn { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 30px; color: var(--text-light); text-decoration: none; transition: color 0.3s, transform 0.3s; font-family: 'Space Mono', monospace; }
       .back-btn:hover { color: var(--accent); transform: translateX(-5px); }
-
+      
       @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
@@ -49,14 +52,6 @@
         to { opacity: 1; transform: translateY(0); }
       }
 
-      @media (prefers-reduced-motion: reduce) {
-        .cs-header, .cs-section {
-          animation: none !important;
-          transform: none !important;
-          opacity: 1 !important;
-        }
-      }
-      
       @media (max-width: 768px) {
         .cs-section { padding: 25px; }
         .tech-stack-table td, .tech-stack-table th { display: block; width: 100%; padding: 10px 0; }
@@ -96,13 +91,13 @@
       <a href="../projects.html" class="back-btn">← All Projects</a>
       
       <header class="cs-header">
-        <h1 class="cs-title">VST OpenSource Admin</h1>
-        <p class="cs-tagline">Centralized dashboard for tracking Vedam's open-source health</p>
+        <h1 class="cs-title">Vedam Open Admin</h1>
+        <p class="cs-tagline">Organization Management Suite</p>
         <div class="cs-tags">
-          <span class="tag">React</span>
+          <span class="tag">Vanilla JS</span>
           <span class="tag">Firebase</span>
           <span class="tag">GitHub API</span>
-          <span class="tag">TailwindCSS</span>
+          <span class="tag">Modular architecture</span>
         </div>
         <div class="cs-links">
           <a href="https://github.com/vstopensource-gif/Vedam-OpenSource-Admin" target="_blank" class="btn-outline">GitHub Repo ↗</a>
@@ -111,44 +106,82 @@
 
       <section class="cs-section">
         <h2>Overview</h2>
-        <p>An administrative dashboard purpose-built for the Vedam School of Technology organization to manage, track, and encourage open-source contributions. It provides maintainers with a centralized hub to review open-source health metrics, track pull requests, manage issues, and automate CI/CD workflows.</p>
+        <p><strong>Vedam Open Admin</strong> is a robust, modular administration platform built to manage the Vedam Open Source organization. It provides club leads with powerful tools for member orchestration, dynamic form building, and deep GitHub integration, all while maintaining high performance and strict security standards.</p>
       </section>
 
       <section class="cs-section">
-        <h2>Key Features</h2>
+        <h2>Advanced Features</h2>
+        <h3>👥 Member Orchestration</h3>
         <ul class="feature-list">
-          <li><strong>GitHub API Deep Integration:</strong> Pulls live repository statistics (stars, forks, open issues, PR statuses) directly via authenticated GitHub API calls.</li>
-          <li><strong>Contributor Leaderboard:</strong> Automatically ranks organization contributors based on merged pull requests and issue resolutions.</li>
-          <li><strong>Role-Based Access Control (RBAC):</strong> Integrated with Firebase Auth to ensure only designated VST administrators can approve actions or merge PRs from the dashboard.</li>
-          <li><strong>Automated Issue Tracking:</strong> Visualizes issue lifecycles from open to in-progress to closed.</li>
+          <li><strong>Granular Management:</strong> Track member roles, contributions, and engagement levels with advanced filtering and pagination.</li>
+          <li><strong>Dynamic Search:</strong> Real-time, debounced member search for quick access to contributor records.</li>
+        </ul>
+
+        <h3>📝 Dynamic Form Builder</h3>
+        <ul class="feature-list">
+          <li><strong>Custom Intake:</strong> Create and deploy custom forms for recruitment, surveys, or feedback.</li>
+          <li><strong>Automated Validation:</strong> Integrated field validation and submission tracking with real-time Firestore updates.</li>
+        </ul>
+
+        <h3>🐙 Intelligent GitHub Integration</h3>
+        <ul class="feature-list">
+          <li><strong>API Caching:</strong> Intelligent caching mechanism to minimize GitHub API calls and handle rate limits.</li>
+          <li><strong>Background Refresh:</strong> Automated background data synchronization to keep member activity metrics up-to-date.</li>
+        </ul>
+
+        <h3>📊 Performance Optimizations</h3>
+        <ul class="feature-list">
+          <li><strong>Virtual Scrolling:</strong> High-performance list rendering for large member directories.</li>
+          <li><strong>Request Deduplication:</strong> Prevents redundant network requests to save bandwidth and improve latency.</li>
         </ul>
       </section>
 
       <section class="cs-section">
-        <h2>Technical Architecture</h2>
+        <h2>Modular Architecture</h2>
+        <p>The platform follows a strict service-oriented architecture using ES6 modules, ensuring a clean separation of concerns between data management, API services, and UI rendering.</p>
+        <p>This modular approach allows for independent scaling and maintenance of the different components, making it a sustainable solution for a growing organization.</p>
+      </section>
+
+      <section class="cs-section">
+        <h2>Tech Stack Deep Dive</h2>
         <table class="tech-stack-table">
           <thead>
             <tr>
               <th>Component</th>
               <th>Technology</th>
+              <th>Role</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Frontend</td>
-              <td>React 18 / Vite / TailwindCSS</td>
+              <td>Vanilla JS (ES6 Modules)</td>
+              <td>Clean, modular application logic</td>
             </tr>
             <tr>
-              <td>Data Sync</td>
-              <td>GitHub REST API (Octokit)</td>
+              <td>Database</td>
+              <td>Cloud Firestore</td>
+              <td>Real-time structured data storage</td>
             </tr>
             <tr>
-              <td>Authentication</td>
-              <td>Firebase Auth (OAuth with GitHub)</td>
+              <td>Auth</td>
+              <td>Firebase Authentication</td>
+              <td>Admin-only secure access</td>
             </tr>
             <tr>
-              <td>State Management</td>
-              <td>React Context API</td>
+              <td>Styling</td>
+              <td>Custom Responsive CSS</td>
+              <td>Professional, mobile-first dashboard UI</td>
+            </tr>
+            <tr>
+              <td>Optimizations</td>
+              <td>Custom Virtual Scroll</td>
+              <td>Smooth rendering of large datasets</td>
+            </tr>
+            <tr>
+              <td>Integration</td>
+              <td>GitHub REST API</td>
+              <td>Contributor activity synchronization</td>
             </tr>
           </tbody>
         </table>
@@ -157,7 +190,7 @@
 
     <footer class="footer">
       <div class="container footer__inner">
-        <p class="footer__text">&copy; 2026 Aayush Bhatt. Built with passion.</p>
+        <p class="footer__text">&copy; 2026 Aayush Bhatt.</p>
       </div>
     </footer>
 
